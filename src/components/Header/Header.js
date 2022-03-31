@@ -8,9 +8,9 @@ const Header = () => {
             <img src={logo} alt="" />
             <div>
                 <a href="/shop">Shop</a>
-                <a href="/order">Order</a>
-                <a href="/order-review">Order Review </a>
-                <a href="/manage-inventory">Manage Inventory</a>
+                <a href="/orders">Orders</a>
+                <a href="/inventory">Manage Inventory</a>
+                <a href="/about">About</a>
             </div>
         </nav>
     );

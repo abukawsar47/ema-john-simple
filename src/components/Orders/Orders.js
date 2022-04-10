@@ -5,18 +5,18 @@ import useProducts from '../../hooks/useProducts';
 import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
+import './Orders.css';
 
 const Orders = () => {
-
     const [products, setProducts] = useProducts();
     const [cart, setCart] = useCart(products);
     const navigate = useNavigate();
-
     const handleRemoveProduct = product => {
         const rest = cart.filter(pd => pd.id !== product.id);
         setCart(rest);
         removeFromDb(product.id);
     }
+
 
     return (
         <div className='shop-container'>
@@ -31,7 +31,7 @@ const Orders = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <button onClick={() => navigate('/inventory')}>Hello From Order</button>
+                    <button onClick={() => navigate('/shipment')}>Proceed Shipping </button>
                 </Cart>
             </div>
         </div>

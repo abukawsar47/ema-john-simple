@@ -25,3 +25,4 @@ const Product = ({ product, handleAddToCart }) => {
 };
 
 export default Product;
+
